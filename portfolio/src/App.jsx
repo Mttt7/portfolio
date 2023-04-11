@@ -80,16 +80,16 @@ function App() {
                 <div className='left-side'>
                   <div className='introduction dynamic-text'><span>Hello, I'm Michal</span></div>
                   <div className='further-introduction'>
-                    <div className='text'>
+                    <div className='text '>
                     I am a Computer Science student. I'm really into programming and I love to learn new things. I actively seek out opportunities to expand my knowledge and improve my programming skills. 
                     </div>
                    
                   </div>
                   <a href={CV} download><div className='download-cv'>DOWNLOAD CV</div></a>
-                  <div className='further-introduction bigger-font'>I am eager to find a place where I can contribute to real projects and further enhance my skills through practical experience.</div>
+                  <div className='further-introduction bigger-font '>I am eager to find a place where I can contribute to real projects and further enhance my skills through practical experience.</div>
                   
                 </div>
-                <img className='laptop-gif' src={laptopImg}/>
+                <img className='laptop-gif fade-in' src={laptopImg}/>
               </div>
 
               <div className='technologies'>
