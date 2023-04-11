@@ -105,9 +105,9 @@ function App() {
                 PROJECTS:
                 <div className='projects-container'>
                 <Project color={'#5680E9'} name={'Weather App'} description={"My first project in React.js. I've used Pexels and OpenWeather API to retrieve data needed to display weather and image associated with given city."} link={'https://github.com/Mttt7/weather-app-react'}> </Project>
-                <Project color={'#ff726f'} name={'Library'} description={"Simple Library app written in Vanilla JS."} link={'https://mttt7.github.io/todolist/'}> </Project>
-                <Project color={'#74B652'} name={'Sketchbook'} description={"Sketchbook app allows you to draw on a square grid. Vanilla JS."} link={'https://mttt7.github.io/todolist/'}> </Project>
-                <Project color={'#653496'} name={'To do list'} description={"To Do List allows users to create, manage, and organize their tasks. Users can add, edit, and delete tasks, set due dates, and mark completed tasks and asign them to Projects. Vanilla JS"} link={'https://mttt7.github.io/todolist/'}> </Project>
+                <Project color={'#ff726f'} name={'Library'} description={"Simple Library app written in Vanilla JS."} link={'https://github.com/Mttt7/Library'}> </Project>
+                <Project color={'#74B652'} name={'Sketchbook'} description={"Sketchbook app allows you to draw on a square grid. Vanilla JS."} link={'https://github.com/Mttt7/Etch-a-Sketch'}> </Project>
+                <Project color={'#653496'} name={'To do list'} description={"To Do List allows users to create, manage, and organize their tasks. Users can add, edit, and delete tasks, set due dates, and mark completed tasks and assign them to Projects. Vanilla JS"} link={'https://github.com/Mttt7/todolist'}> </Project>
               
                 </div>
                </div>
