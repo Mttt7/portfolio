@@ -246,9 +246,6 @@ a{
     border-left: 2px solid white;
     animation: typing 2.5s steps(17) forwards;
 }
-
-
-
 @keyframes typing {
     100% {
         left: 100%;
