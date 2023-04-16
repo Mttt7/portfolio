@@ -9,6 +9,7 @@
   font-family: 'PT Sans Narrow', sans-serif;
   overflow-y: auto; 
   overflow-x: hidden;
+
 }
 
 .header {
@@ -27,26 +28,29 @@
     width: 100vw;
     font-family: 'Bebas Neue', cursive;
     font-size: 5.5rem;
-    background-color: #2b4994;
+    background-color: #ffffff;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .laptop-gif{
     width: 100px;
+    
 }
+
 .download-cv{
     
-   
-    font-weight: 500;
-    color: white;
-    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
+    
+    color: rgb(0, 0, 0);
+    font-size: 1.8rem;
     margin-top: .1rem;
     cursor: pointer;
     width: fit-content;
     padding: .8rem;
     border-radius: 10px;
-    background-color: #5680e9aa;
+    background-color: #ffffff;
 }
 a{
     text-decoration: none;
@@ -62,7 +66,7 @@ a{
     font-size: 1.7rem;
 }
 .download-cv:hover{
-    background-color: #5680E9;
+    background-color: #ffffff;
     transform: scale(1.09);
     transition: .4s;
 }
@@ -75,6 +79,7 @@ a{
     font-size: 1.7rem;
     width: 500px;
     padding: 1rem 0rem 1rem 0rem;
+    
 }
 
 .bigger-font{
@@ -188,6 +193,7 @@ a{
 }
 .contact .text{
     font-size: 4rem;
+    
 }
 .copy-email{
     display: flex;
@@ -213,7 +219,7 @@ a{
 
 .footer{
     margin-top: auto;
-    background-color: #2b4994;
+    background-color: #ffffff;
     width: 100%;
     display:flex;
     align-items: center;
@@ -223,8 +229,9 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.6rem;
+    font-weight: 500;
     
 }
 .footer .link img{
@@ -242,8 +249,8 @@ a{
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #2b4994;
-    border-left: 2px solid white;
+    background-color: white;
+    border-left: 4px solid rgb(0, 0, 0);
     animation: typing 2.5s steps(17) forwards;
 }
 @keyframes typing {
@@ -308,7 +315,19 @@ a{
     }
 }
 
+.video-background{
+    position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .5;
+}
 
+.container > *{
+    z-index: 10;
+}
 
 
 

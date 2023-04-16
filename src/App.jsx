@@ -6,6 +6,7 @@ import gitHubImage from './images/github.png'
 import laptopImg from './images/laptop.gif'
 import CV from './assets/cv.pdf'
 import copyImg from './images/copy.png'
+import { Helmet } from 'react-helmet';
 
 let projectId = 0
 function Project({name,description,link,color}){
@@ -74,7 +75,13 @@ function App() {
 
   return (
     <div className='container'>
-      
+      <video className="video-background" autoPlay muted loop>
+        <source src="../public/video-background.mp4" type="video/mp4" />
+        </video>
+      <Helmet>
+        <title>Michał Tomaszewski</title>
+        <link rel="icon" href="/images/MT.svg"></link>
+      </Helmet>
             
               <div className='header'>
                 <div className='left-side'>
@@ -85,7 +92,7 @@ function App() {
                     </div>
                    
                   </div>
-                  <a href={CV} download><div className='download-cv'>DOWNLOAD CV</div></a>
+                  <a href={CV} download className='sticky'><div className='download-cv'>DOWNLOAD CV</div></a>
                   <div className='further-introduction bigger-font '>I am eager to find a place where I can contribute to real projects and further enhance my skills through practical experience.</div>
                   
                 </div>
@@ -118,7 +125,7 @@ function App() {
               </div>
 
               <Footer></Footer>          
-      
+              
     </div>
   )
 }
