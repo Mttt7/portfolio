@@ -76,7 +76,7 @@ function App() {
   return (
     <div className='container'>
       <video className="video-background" autoPlay muted loop>
-        <source src="../public/video-background.mp4" type="video/mp4" />
+        <source src="/video-background.mp4" type="video/mp4" />
         </video>
       <Helmet>
         <title>Michał Tomaszewski</title>
