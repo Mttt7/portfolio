@@ -22,11 +22,14 @@ const styles={
 
   console.log(`url(./images/${technology}.png)`)
   let techClass
+  let colorClass
   if(technology==='angular'){
     techClass = 'angular'
+    
   }
   else if(technology==='react'){
     techClass='react'
+    colorClass = 'black'
   }
   else if(technology==='js'){
     techClass='js'
@@ -54,7 +57,7 @@ const styles={
             </div>
 
             <div className={`back-card ${techClass}`}   onClick={handleClick}>
-              <div className='description' style={styles} onClick={handleClick}> {description}</div>
+              <div className={`description  ${colorClass}`} style={styles}  onClick={handleClick}> {description}</div>
               
               <div className='git-link'  ><a href={link}><img src={gitHubImage}/>GitHub</a></div>
               
@@ -85,7 +88,9 @@ function Footer(){
   const link = 'https://github.com/Mttt7'
   return(
     <div className='footer'>
+      
       <div className='link'><a href={link}><img src={gitHubImage}/>Michał Tomaszewski 2023</a></div>
+      <div className="info">*The site may not work properly on iPhones</div>
     </div>
   )
 }
