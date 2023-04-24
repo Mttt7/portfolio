@@ -6,13 +6,33 @@ import gitHubImage from './images/github.png'
 import laptopImg from './images/laptop.gif'
 import CV from './assets/cv.pdf'
 import copyImg from './images/copy.png'
+
+import angularImg from './images/angular.png'
+
+
 import { Helmet } from 'react-helmet';
 
 let projectId = 0
-function Project({name,description,link,color}){
-  const styles = {
-    backgroundColor: color
+function Project({name,description,link,color,technology}){
+  
+const styles={
+  //backgroundColor:color
+}
+
+
+  console.log(`url(./images/${technology}.png)`)
+  let techClass
+  if(technology==='angular'){
+    techClass = 'angular'
   }
+  else if(technology==='react'){
+    techClass='react'
+  }
+  else if(technology==='js'){
+    techClass='js'
+  }
+  
+  
   const projectCard = useRef()
   
   function handleClick(e){
@@ -26,14 +46,14 @@ function Project({name,description,link,color}){
     
   }
   return(
-    <div className='maincontainer'>
-        <div className='project-card prevent-select' style={styles} onClick={handleClick} ref={projectCard}>
+    <div className='maincontainer' >
+        <div className='project-card prevent-select'  onClick={handleClick} ref={projectCard}>
 
-            <div className='front-card' style={styles} onClick={handleClick}>
+            <div className={`front-card ${techClass}`}  onClick={handleClick}>
               <div className='title'>{name}</div>
             </div>
 
-            <div className='back-card' style={styles} onClick={handleClick}>
+            <div className={`back-card ${techClass}`}   onClick={handleClick}>
               <div className='description' style={styles} onClick={handleClick}> {description}</div>
               
               <div className='git-link'  ><a href={link}><img src={gitHubImage}/>GitHub</a></div>
@@ -111,11 +131,12 @@ function App() {
               <div className='projects'>
                 PROJECTS:
                 <div className='projects-container'>
-                <Project color={'#FFA500'} name={'Dev.to clone'} description={"Dev.to clone created using Next.js and Firebase. You can log in using your google account. It uses SSR and ISR to ensure best user experience."} link={'https://github.com/Mttt7/devto-clone'}> </Project>
-                <Project color={'#5680E9'} name={'Weather App'} description={"My first project in React.js. I've used Pexels and OpenWeather API to retrieve data needed to display weather and image associated with given city."} link={'https://github.com/Mttt7/weather-app-react'}> </Project>
-                <Project color={'#019B00'} name={'Sketchbook'} description={"Sketchbook app allows you to draw on a square grid. Vanilla JS."} link={'https://github.com/Mttt7/Etch-a-Sketch'}> </Project>
-                <Project color={'#653496'} name={'To do list'} description={"To Do List allows users to create, manage, and organize their tasks. Users can add, edit, and delete tasks, set due dates, and mark completed tasks and assign them to Projects. Vanilla JS"} link={'https://github.com/Mttt7/todolist'}> </Project>
-                <Project color={'#FF1F00'} name={'Library'} description={"Simple Library app written in Vanilla JS."} link={'https://github.com/Mttt7/Library'}> </Project>
+                {/* <Project technology='angular' color={'#ffffff00'} name={'Dev.to clone'} description={"."} link={''}> </Project> */}
+                <Project technology='react' color={'#ffffff00'} name={'Dev.to clone'} description={"Dev.to clone created using Next.js and Firebase. You can log in using your google account. It uses SSR and ISR to ensure best user experience."} link={'https://github.com/Mttt7/devto-clone'}> </Project>
+                <Project technology='react' color={'#ffffff00'} name={'Weather App'} description={"My first project in React.js. I've used Pexels and OpenWeather API to retrieve data needed to display weather and image associated with given city."} link={'https://github.com/Mttt7/weather-app-react'}> </Project>
+                <Project technology='js' color={'##ffffff00'} name={'Sketchbook'} description={"Sketchbook app allows you to draw on a square grid. Vanilla JS."} link={'https://github.com/Mttt7/Etch-a-Sketch'}> </Project>
+                <Project technology='js' color={'#ffffff00'} name={'To do list'} description={"To Do List allows users to create, manage, and organize their tasks. Users can add, edit, and delete tasks, set due dates, and mark completed tasks and assign them to Projects. Vanilla JS"} link={'https://github.com/Mttt7/todolist'}> </Project>
+                <Project technology='js' color={'#ffffff00'} name={'Library'} description={"Simple Library app written in Vanilla JS."} link={'https://github.com/Mttt7/Library'}> </Project>
                 
                 </div>
                </div>
